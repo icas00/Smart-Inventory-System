@@ -1,0 +1,19 @@
+# Node/Next.js frontend
+smart-inventory-frontend/node_modules/
+smart-inventory-frontend/.next/
+smart-inventory-frontend/.env
+
+# Frappe backend
+smart-inventory-backend-frappe/env/
+smart-inventory-backend-frappe/*.log
+smart-inventory-backend-frappe/*.pyc
+smart-inventory-backend-frappe/site_config.json
+
+# Spring backend
+smart-inventory-payments-spring/target/
+smart-inventory-payments-spring/*.log
+smart-inventory-payments-spring/*.class
+smart-inventory-payments-spring/.env
+
+# General
+.DS_Store

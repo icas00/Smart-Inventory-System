@@ -1,0 +1,16 @@
+{
+  "doctype": "DocType",
+  "name": "Stock Movement",
+  "module": "Smart Inventory",
+  "custom": true,
+  "fields": [
+    {"fieldname": "product", "label": "Product", "fieldtype": "Link", "options": "Product", "reqd": 1},
+    {"fieldname": "movement_type", "label": "Movement Type", "fieldtype": "Select", "options": "IN\nOUT", "reqd": 1},
+    {"fieldname": "quantity", "label": "Quantity", "fieldtype": "Int", "reqd": 1, "default": 1},
+    {"fieldname": "description", "label": "Description", "fieldtype": "Data"}
+  ],
+  "permissions": [
+    {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+    {"role": "Employee", "read": 1, "write": 1, "create": 1, "delete": 0}
+  ]
+}

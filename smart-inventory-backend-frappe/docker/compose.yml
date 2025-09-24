@@ -1,0 +1,31 @@
+# UK English comments
+# docker-compose file for Smart Inventory backend
+
+version: "3"
+
+services:
+  frappe:
+    build: .
+    container_name: smart_inventory_frappe
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    volumes:
+      - ../frappe_app:/home/frappe/frappe-bench/apps
+      - ./sites:/home/frappe/frappe-bench/sites
+
+  db:
+    image: postgres:15
+    container_name: smart_inventory_db
+    environment:
+      POSTGRES_USER: frappe
+      POSTGRES_PASSWORD: frappe
+      POSTGRES_DB: frappe
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:

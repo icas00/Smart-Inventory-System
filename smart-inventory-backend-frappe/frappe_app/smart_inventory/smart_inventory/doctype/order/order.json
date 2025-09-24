@@ -1,0 +1,17 @@
+{
+  "doctype": "DocType",
+  "name": "Order Item",
+  "module": "Smart Inventory",
+  "custom": true,
+  "fields": [
+    {"fieldname": "product", "label": "Product", "fieldtype": "Link", "options": "Product", "reqd": 1},
+    {"fieldname": "quantity", "label": "Quantity", "fieldtype": "Int", "reqd": 1, "default": 1},
+    {"fieldname": "price", "label": "Price", "fieldtype": "Currency"}
+  ],
+  "permissions": [
+    {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+    {"role": "Employee", "read": 1, "write": 1, "create": 1, "delete": 0},
+    {"role": "Customer", "read": 1, "write": 0, "create": 1, "delete": 0}
+  ],
+  "istable": 1
+}

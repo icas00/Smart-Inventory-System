@@ -1,0 +1,18 @@
+{
+  "doctype": "DocType",
+  "name": "User Profile",
+  "module": "Smart Inventory",
+  "custom": true,
+  "fields": [
+    {"fieldname": "first_name", "label": "First Name", "fieldtype": "Data", "reqd": 1},
+    {"fieldname": "last_name", "label": "Last Name", "fieldtype": "Data"},
+    {"fieldname": "email", "label": "Email", "fieldtype": "Data", "reqd": 1, "unique": 1},
+    {"fieldname": "password", "label": "Password", "fieldtype": "Password", "reqd": 1},
+    {"fieldname": "role", "label": "Role", "fieldtype": "Select", "options": "Admin\nEmployee\nCustomer", "default": "Customer"}
+  ],
+  "permissions": [
+    {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+    {"role": "Employee", "read": 1, "write": 0, "create": 1, "delete": 0},
+    {"role": "Customer", "read": 1, "write": 0, "create": 1, "delete": 0}
+  ]
+}

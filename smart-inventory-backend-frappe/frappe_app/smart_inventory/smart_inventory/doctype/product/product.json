@@ -1,0 +1,21 @@
+{
+  "doctype": "DocType",
+  "name": "Product",
+  "module": "Smart Inventory",
+  "custom": true,
+  "fields": [
+    {"fieldname": "sku", "label": "SKU", "fieldtype": "Data", "reqd": 1},
+    {"fieldname": "name", "label": "Name", "fieldtype": "Data", "reqd": 1},
+    {"fieldname": "description", "label": "Description", "fieldtype": "Text"},
+    {"fieldname": "price", "label": "Price", "fieldtype": "Currency", "reqd": 1},
+    {"fieldname": "cost", "label": "Cost", "fieldtype": "Currency"},
+    {"fieldname": "quantity", "label": "Quantity", "fieldtype": "Int", "default": 0},
+    {"fieldname": "re_order_level", "label": "Re-order Level", "fieldtype": "Int", "default": 0}
+  ],
+  "permissions": [
+    {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+    {"role": "Employee", "read": 1, "write": 1, "create": 1, "delete": 0},
+    {"role": "Customer", "read": 1, "write": 0, "create": 0, "delete": 0}
+  ],
+  "is_submittable": 0
+}

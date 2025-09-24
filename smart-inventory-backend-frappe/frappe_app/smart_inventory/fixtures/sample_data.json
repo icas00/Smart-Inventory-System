@@ -1,0 +1,94 @@
+[
+  {
+    "doctype": "Product",
+    "sku": "PROD001",
+    "name": "Wireless Mouse",
+    "description": "Ergonomic wireless mouse",
+    "price": 1200,
+    "cost": 800,
+    "quantity": 50,
+    "re_order_level": 10
+  },
+  {
+    "doctype": "Product",
+    "sku": "PROD002",
+    "name": "Mechanical Keyboard",
+    "description": "RGB mechanical keyboard",
+    "price": 3500,
+    "cost": 2500,
+    "quantity": 30,
+    "re_order_level": 5
+  },
+  {
+    "doctype": "Product",
+    "sku": "PROD003",
+    "name": "USB-C Charger",
+    "description": "Fast charging USB-C adapter",
+    "price": 800,
+    "cost": 500,
+    "quantity": 100,
+    "re_order_level": 20
+  },
+  {
+    "doctype": "User Profile",
+    "first_name": "Alice",
+    "last_name": "Smith",
+    "email": "alice@example.com",
+    "password": "password123",
+    "role": "Admin"
+  },
+  {
+    "doctype": "User Profile",
+    "first_name": "Bob",
+    "last_name": "Johnson",
+    "email": "bob@example.com",
+    "password": "password123",
+    "role": "Employee"
+  },
+  {
+    "doctype": "User Profile",
+    "first_name": "Charlie",
+    "last_name": "Brown",
+    "email": "charlie@example.com",
+    "password": "password123",
+    "role": "Customer"
+  },
+  {
+    "doctype": "Order",
+    "customer": "Charlie",
+    "status": "Created",
+    "order_items": [
+      {"product": "PROD001", "quantity": 2, "price": 1200},
+      {"product": "PROD003", "quantity": 1, "price": 800}
+    ]
+  },
+  {
+    "doctype": "Order",
+    "customer": "Charlie",
+    "status": "Delivered",
+    "order_items": [
+      {"product": "PROD002", "quantity": 1, "price": 3500}
+    ]
+  },
+  {
+    "doctype": "Stock Movement",
+    "product": "PROD001",
+    "movement_type": "IN",
+    "quantity": 50,
+    "description": "Initial stock"
+  },
+  {
+    "doctype": "Stock Movement",
+    "product": "PROD002",
+    "movement_type": "IN",
+    "quantity": 30,
+    "description": "Initial stock"
+  },
+  {
+    "doctype": "Stock Movement",
+    "product": "PROD003",
+    "movement_type": "IN",
+    "quantity": 100,
+    "description": "Initial stock"
+  }
+]
